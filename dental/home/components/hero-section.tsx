@@ -30,13 +30,13 @@ export default function HeroSection() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a href={`#contacto`}>
-                            <Button className="flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 h-auto rounded-lg font-bold text-base transition-all shadow-lg shadow-[var(--primary)]/30 cursor-pointer">
+                            <Button className="flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 h-auto rounded-lg font-bold text-base transition-all shadow-lg shadow-[var(--primary)]/30 cursor-pointer hover:scale-105 hover:shadow-none">
                                 <HugeiconsIcon icon={Calendar03Icon} size={20} />
                                 Agendar Cita
                             </Button>
                         </a>
                         <a href={`#servicios`}>
-                            <Button className="flex items-center justify-center gap-2 bg-white text-[var(--secondary)] hover:bg-gray-200 px-8 py-4 h-auto rounded-lg font-bold text-base transition-all cursor-pointer">
+                            <Button className="flex items-center justify-center gap-2 bg-white text-[var(--secondary)] hover:bg-gray-200 px-8 py-4 h-auto rounded-lg font-bold text-base transition-all cursor-pointer hover:scale-105 hover:shadow-none">
                                 Nuestros Servicios
                             </Button>
                         </a>

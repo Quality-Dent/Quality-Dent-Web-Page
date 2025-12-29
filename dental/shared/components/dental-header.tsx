@@ -3,6 +3,20 @@ import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Chatting01Icon, Menu01Icon} from "@hugeicons/core-free-icons";
 import Image from "next/image";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuPortal,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function DentalHeader() {
   return (
@@ -46,9 +60,39 @@ export default function DentalHeader() {
                   </Button>
               </div>
 
-              <Button variant="ghost" size="icon" className="md:hidden" aria-label="Abrir menú">
-                  <HugeiconsIcon icon={Menu01Icon} strokeWidth={2} className="size-5" />
-              </Button>
+
+
+              <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon" className="md:hidden" aria-label="Abrir menú">
+                          <HugeiconsIcon icon={Menu01Icon} strokeWidth={2} className="size-5" />
+                      </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56" align="start">
+
+                      <DropdownMenuItem asChild>
+                          <Link href="#inicio">Inicio</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                          <Link href="#nosotros">Nosotros</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                          <Link href="#servicios">Servicios</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                          <Link href="#contacto">Contacto</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem >
+                          <Link href="#contacto" target={`_blank`}>
+                              <div className={`flex gap-2`}>
+                                  <HugeiconsIcon icon={Chatting01Icon} strokeWidth={2} className="size-4" />
+                                  Pedir Cita WhatsApp
+                              </div>
+                          </Link>
+                      </DropdownMenuItem>
+                  </DropdownMenuContent>
+              </DropdownMenu>
           </div>
       </header>
   );

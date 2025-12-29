@@ -74,7 +74,7 @@ export default function DentalFooter() {
 
                 <div className="flex flex-col items-center justify-between gap-2 border-t border-muted-foreground pt-8 text-xs text-muted-foreground md:flex-row">
                     <p>© 2025 Quality Dent. Todos los derechos reservados.</p>
-                    <p>Design and Implementation by Neo.</p>
+                    <p>Design and Implementation by Juan Astonitas D.</p>
                 </div>
             </div>
         </footer>

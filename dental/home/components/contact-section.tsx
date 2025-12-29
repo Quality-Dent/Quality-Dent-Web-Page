@@ -175,7 +175,7 @@ export default function ContactSection() {
                                     <HugeiconsIcon icon={Call02Icon} size={24} />
                                     Contacto Directo
                                 </h3>
-                                <p className="text-gray-300 text-lg hover:text-[var(--primary)] transition-colors cursor-pointer">
+                                <p className="text-gray-300 text-lg ">
                                     +51 957 887 918
                                 </p>
                                 <p className="text-gray-300 text-sm mt-1">
@@ -183,7 +183,7 @@ export default function ContactSection() {
                                 </p>
                             </div>
                         </div>
-                        <div className="relative mt-8 h-48 w-full rounded-xl overflow-hidden border-2 border-white/20 group cursor-pointer">
+                        <div className="relative mt-8 h-58 w-full rounded-xl overflow-hidden border-2 border-white/20 group cursor-pointer">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                                 style={{
