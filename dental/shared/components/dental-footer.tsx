@@ -32,10 +32,10 @@ export default function DentalFooter() {
                         <div className="mb-4 font-semibold">Enlaces Rápidos</div>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             {[
-                                ["Inicio", "#inicio"],
-                                ["Nosotros", "#nosotros"],
-                                ["Servicios", "#servicios"],
-                                ["Contacto", "#contacto"],
+                                ["Inicio", "/#inicio"],
+                                ["Nosotros", "/#nosotros"],
+                                ["Servicios", "/#servicios"],
+                                ["Contacto", "/#contacto"],
                             ].map(([label, href]) => (
                                 <li key={href}>
                                     <Link className="hover:text-white/50" href={href}>
@@ -52,9 +52,9 @@ export default function DentalFooter() {
                             {["Implantes Dentales", "Ortodoncia", "Estética Dental"].map(
                                 (label) => (
                                     <li key={label}>
-                                        <a className="hover:text-white/50" href="#">
+                                        <Link className="hover:text-white/50" href="/#servicios">
                                             {label}
-                                        </a>
+                                        </Link>
                                     </li>
                                 )
                             )}
