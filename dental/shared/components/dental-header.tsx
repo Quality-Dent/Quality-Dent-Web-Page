@@ -6,15 +6,8 @@ import Image from "next/image";
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuPortal,
     DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -36,10 +29,10 @@ export default function DentalHeader() {
 
               <nav className="hidden items-center gap-8 md:flex">
                   {[
-                      ["Inicio", "#inicio"],
-                      ["Nosotros", "#nosotros"],
-                      ["Servicios", "#servicios"],
-                      ["Contacto", "#contacto"],
+                      ["Inicio", "/#inicio"],
+                      ["Nosotros", "/#nosotros"],
+                      ["Servicios", "/#servicios"],
+                      ["Contacto", "/#contacto"],
                   ].map(([label, href]) => (
                       <Link
                           key={href}
