@@ -6,6 +6,7 @@ import {Button} from "@/components/ui/button";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {SentIcon, Location01Icon, Clock01Icon, Call02Icon, MapsIcon, WhatsappIcon} from "@hugeicons/core-free-icons";
 import Link from "next/link";
+import ContactForm from "@/dental/home/presentation/components/contact-form";
 
 export default function ContactSection() {
     return (
@@ -47,87 +48,9 @@ export default function ContactSection() {
                             <div className="flex-grow border-t border-gray-200"></div>
                         </div>
 
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="col-span-1">
-                                    <Label
-                                        htmlFor="name"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Nombre Completo
-                                    </Label>
-                                    <Input
-                                        id="name"
-                                        placeholder="Juan Pérez"
-                                        type="text"
-                                        className="w-full rounded-lg border-gray-200 focus:border-[var(--primary)] focus:ring-[var(--primary)] bg-gray-50 p-3 text-[var(--secondary)] h-12"
-                                    />
-                                </div>
-                                <div className="col-span-1">
-                                    <Label
-                                        htmlFor="phone"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Teléfono / WhatsApp
-                                    </Label>
-                                    <Input
-                                        id="phone"
-                                        placeholder="999 000 000"
-                                        type="tel"
-                                        className="w-full rounded-lg border-gray-200 focus:border-[var(--primary)] focus:ring-[var(--primary)] bg-gray-50 p-3 text-[var(--secondary)] h-12"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <Label
-                                    htmlFor="service"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                >
-                                    Servicio de Interés
-                                </Label>
-                                <Select>
-                                    <SelectTrigger className="w-full rounded-lg border-gray-200 focus:border-[var(--primary)] focus:ring-[var(--primary)] bg-gray-50 p-3 text-[var(--secondary)] h-12">
-                                        <SelectValue placeholder="Selecciona un servicio" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectItem value="consulta">
-                                            Consulta General
-                                        </SelectItem>
-                                        <SelectItem value="implantes">
-                                            Implantes Dentales
-                                        </SelectItem>
-                                        <SelectItem value="ortodoncia">
-                                            Ortodoncia
-                                        </SelectItem>
-                                        <SelectItem value="limpieza">
-                                            Limpieza
-                                        </SelectItem>
-                                        <SelectItem value="otro">Otro</SelectItem>
-                                    </SelectContent>
-                                </Select>
-                            </div>
-                            <div>
-                                <Label
-                                    htmlFor="message"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                >
-                                    Mensaje (Opcional)
-                                </Label>
-                                <Textarea
-                                    id="message"
-                                    placeholder="¿Tienes alguna duda específica?"
-                                    rows={4}
-                                    className="w-full rounded-lg border-gray-200 focus:border-[var(--primary)] focus:ring-[var(--primary)] bg-gray-50 p-3 text-[var(--secondary)]"
-                                />
-                            </div>
-                            <Button
-                                type="button"
-                                className="w-full bg-[var(--secondary)] hover:bg-[var(--secondary)]/90 text-white font-bold py-4 h-auto rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                            >
-                                Enviar Solicitud
-                                <HugeiconsIcon icon={SentIcon} size={20} />
-                            </Button>
-                        </form>
+                        <ContactForm/>
+
+                        
                     </div>
 
                     {/* Contact Info */}

@@ -1,4 +1,4 @@
-import HomePage from "@/dental/home/pages/home-page";
+import HomePage from "@/dental/home/presentation/pages/home-page";
 
 export default function Page() {
     return (

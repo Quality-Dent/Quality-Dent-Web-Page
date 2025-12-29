@@ -5,6 +5,7 @@ import DentalFooter from "@/dental/shared/components/dental-footer";
 import DentalHeader from "@/dental/shared/components/dental-header";
 import React from "react";
 import ReactLenis from "lenis/react";
+import {Toaster} from "@/components/ui/sonner";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -38,6 +39,7 @@ export default function RootLayout({
             </main>
             <DentalFooter/>
         </div>
+        <Toaster richColors/>
         <ReactLenis root />
       </body>
     </html>
