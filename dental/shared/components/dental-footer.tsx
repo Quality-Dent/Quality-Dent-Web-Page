@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const legalOptions = [
+    {label: "Política de Privacidad" , route: "/privacy-policy"},
+    {label:"Términos y Condiciones" , route: "/terms-and-conditions"},
+];
+
 export default function DentalFooter() {
     return (
         <footer className="border-t bg-[#0B2538] py-12 text-white">
@@ -59,12 +64,12 @@ export default function DentalFooter() {
                     <div>
                         <div className="mb-4 font-semibold">Legal</div>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            {["Política de Privacidad", "Términos y Condiciones"].map(
-                                (label) => (
-                                    <li key={label}>
-                                        <a className="hover:text-white/50" href="#">
-                                            {label}
-                                        </a>
+                            {
+                                legalOptions.map((option,index) => (
+                                    <li key={index}>
+                                        <Link className="hover:text-white/50" href={option.route}>
+                                            {option.label}
+                                        </Link>
                                     </li>
                                 )
                             )}
