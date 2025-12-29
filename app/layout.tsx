@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import DentalFooter from "@/dental/shared/components/dental-footer";
 import DentalHeader from "@/dental/shared/components/dental-header";
+import React from "react";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -28,12 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={inter.variable} suppressHydrationWarning>
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className={`grid min-h-dvh grid-rows-[auto_1fr_auto]`}>
             <DentalHeader/>
             <main>

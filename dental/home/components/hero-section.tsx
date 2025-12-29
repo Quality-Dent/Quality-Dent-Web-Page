@@ -1,6 +1,7 @@
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
-
+import {HugeiconsIcon} from "@hugeicons/react";
+import {Calendar03Icon} from "@hugeicons/core-free-icons";
 
 export default function HeroSection() {
     return (
@@ -29,7 +30,7 @@ export default function HeroSection() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Button className="flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 h-auto rounded-lg font-bold text-base transition-all shadow-lg shadow-[var(--primary)]/30">
-                            <span className="material-symbols-outlined">calendar_month</span>
+                            <HugeiconsIcon icon={Calendar03Icon} size={20} />
                             Agendar Cita
                         </Button>
                         <Button className="flex items-center justify-center gap-2 bg-white text-[var(--secondary)] hover:bg-gray-50 px-8 py-4 h-auto rounded-lg font-bold text-base transition-all">

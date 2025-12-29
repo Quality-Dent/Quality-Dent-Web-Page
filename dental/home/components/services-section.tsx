@@ -1,5 +1,7 @@
 import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
+import {HugeiconsIcon} from "@hugeicons/react";
+import {MedicalFileIcon, ArrowRight01Icon, SmileIcon, Stethoscope02Icon, GridViewIcon, FirstAidKitIcon, ScissorIcon} from "@hugeicons/core-free-icons";
 
 export default function ServicesSection() {
     return (
@@ -23,9 +25,7 @@ export default function ServicesSection() {
                         <div className="absolute right-0 top-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
                         <CardContent className="relative z-10 p-0">
                             <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6 backdrop-blur-sm">
-									<span className="material-symbols-outlined text-3xl">
-										medical_services
-									</span>
+                                <HugeiconsIcon icon={MedicalFileIcon} size={28} />
                             </div>
                             <CardTitle className="text-2xl font-bold mb-3 text-white">
                                 Implantes Dentales
@@ -37,9 +37,7 @@ export default function ServicesSection() {
                             </CardDescription>
                             <Button className="inline-flex items-center gap-2 text-white font-bold text-sm bg-white/20 hover:bg-white/30 px-4 py-2 h-auto rounded-lg transition-colors border-0">
                                 Consultar Ahora
-                                <span className="material-symbols-outlined text-sm">
-										arrow_forward
-									</span>
+                                <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
                             </Button>
                         </CardContent>
                     </Card>
@@ -48,9 +46,7 @@ export default function ServicesSection() {
                     <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
                         <CardContent className="p-0">
                             <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-									<span className="material-symbols-outlined text-3xl">
-										sentiment_satisfied
-									</span>
+                                <HugeiconsIcon icon={SmileIcon} size={28} />
                             </div>
                             <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
                                 Ortodoncia
@@ -71,9 +67,7 @@ export default function ServicesSection() {
                     <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
                         <CardContent className="p-0">
                             <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-									<span className="material-symbols-outlined text-3xl">
-										diagnosis
-									</span>
+                                <HugeiconsIcon icon={Stethoscope02Icon} size={28} />
                             </div>
                             <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
                                 Consulta y Diagnóstico
@@ -94,9 +88,7 @@ export default function ServicesSection() {
                     <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
                         <CardContent className="p-0">
                             <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-									<span className="material-symbols-outlined text-3xl">
-										dentistry
-									</span>
+                                <HugeiconsIcon icon={Stethoscope02Icon} size={28} />
                             </div>
                             <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
                                 Limpieza Dental
@@ -117,9 +109,7 @@ export default function ServicesSection() {
                     <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
                         <CardContent className="p-0">
                             <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-									<span className="material-symbols-outlined text-3xl">
-										grid_view
-									</span>
+                                <HugeiconsIcon icon={GridViewIcon} size={28} />
                             </div>
                             <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
                                 Prótesis
@@ -140,9 +130,7 @@ export default function ServicesSection() {
                     <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
                         <CardContent className="p-0">
                             <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-									<span className="material-symbols-outlined text-3xl">
-										healing
-									</span>
+                                <HugeiconsIcon icon={FirstAidKitIcon} size={28} />
                             </div>
                             <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
                                 Curaciones
@@ -163,9 +151,7 @@ export default function ServicesSection() {
                     <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
                         <CardContent className="p-0">
                             <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-									<span className="material-symbols-outlined text-3xl">
-										content_cut
-									</span>
+                                <HugeiconsIcon icon={ScissorIcon} size={28} />
                             </div>
                             <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
                                 Extracciones

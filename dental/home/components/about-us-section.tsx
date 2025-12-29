@@ -1,5 +1,7 @@
 import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
+import {HugeiconsIcon} from "@hugeicons/react";
+import {CheckmarkCircle02Icon, ArrowRight01Icon} from "@hugeicons/core-free-icons";
 
 export default function AboutUsSection(){
     return (
@@ -66,25 +68,19 @@ export default function AboutUsSection(){
                         </p>
                         <ul className="space-y-4 mb-8">
                             <li className="flex items-center gap-3">
-									<span className="material-symbols-outlined text-[var(--primary)]">
-										check_circle
-									</span>
+                                <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} className="text-[var(--primary)]" />
                                 <span className="text-gray-700 font-medium">
 										Especialistas certificados
 									</span>
                             </li>
                             <li className="flex items-center gap-3">
-									<span className="material-symbols-outlined text-[var(--primary)]">
-										check_circle
-									</span>
+                                <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} className="text-[var(--primary)]" />
                                 <span className="text-gray-700 font-medium">
 										Materiales de alta durabilidad
 									</span>
                             </li>
                             <li className="flex items-center gap-3">
-									<span className="material-symbols-outlined text-[var(--primary)]">
-										check_circle
-									</span>
+                                <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} className="text-[var(--primary)]" />
                                 <span className="text-gray-700 font-medium">
 										Protocolos estrictos de bioseguridad
 									</span>
@@ -95,9 +91,7 @@ export default function AboutUsSection(){
                             href="#contacto"
                         >
                             Conoce más sobre nosotros
-                            <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-									arrow_forward
-								</span>
+                            <HugeiconsIcon icon={ArrowRight01Icon} size={20} className="group-hover:translate-x-1 transition-transform" />
                         </a>
                     </div>
                 </div>

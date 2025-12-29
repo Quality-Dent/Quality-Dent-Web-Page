@@ -3,6 +3,8 @@ import { Label } from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
+import {HugeiconsIcon} from "@hugeicons/react";
+import {SentIcon, Location01Icon, Clock01Icon, Call02Icon, MapsIcon} from "@hugeicons/core-free-icons";
 
 export default function ContactSection() {
     return (
@@ -99,7 +101,7 @@ export default function ContactSection() {
                                 className="w-full bg-[var(--secondary)] hover:bg-[var(--secondary)]/90 text-white font-bold py-4 h-auto rounded-lg transition-colors flex items-center justify-center gap-2"
                             >
                                 Enviar Solicitud
-                                <span className="material-symbols-outlined">send</span>
+                                <HugeiconsIcon icon={SentIcon} size={20} />
                             </Button>
                         </form>
                     </div>
@@ -115,9 +117,7 @@ export default function ContactSection() {
                         <div className="relative z-10 space-y-8">
                             <div>
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-										<span className="material-symbols-outlined">
-											location_on
-										</span>
+                                    <HugeiconsIcon icon={Location01Icon} size={24} />
                                     Ubicación
                                 </h3>
                                 <p className="text-gray-300 leading-relaxed">
@@ -128,7 +128,7 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <span className="material-symbols-outlined">schedule</span>
+                                    <HugeiconsIcon icon={Clock01Icon} size={24} />
                                     Horario de Atención
                                 </h3>
                                 <ul className="space-y-2 text-gray-300">
@@ -148,7 +148,7 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <span className="material-symbols-outlined">call</span>
+                                    <HugeiconsIcon icon={Call02Icon} size={24} />
                                     Contacto Directo
                                 </h3>
                                 <p className="text-gray-300 text-lg hover:text-[var(--primary)] transition-colors cursor-pointer">
@@ -168,9 +168,7 @@ export default function ContactSection() {
                             ></div>
                             <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
                                 <Button className="bg-white text-[var(--secondary)] px-4 py-2 h-auto rounded-lg font-bold text-sm flex items-center gap-2 shadow-lg hover:bg-gray-50">
-										<span className="material-symbols-outlined text-[var(--primary)]">
-											map
-										</span>
+                                    <HugeiconsIcon icon={MapsIcon} size={20} className="text-[var(--primary)]" />
                                     Ver en Google Maps
                                 </Button>
                             </div>

@@ -1,5 +1,7 @@
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
+import {HugeiconsIcon} from "@hugeicons/react";
+import {QuoteDownIcon} from "@hugeicons/core-free-icons";
 
 export default function TestimonialSection() {
     return (
@@ -12,9 +14,7 @@ export default function TestimonialSection() {
                 }}
             ></div>
             <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
-					<span className="material-symbols-outlined text-6xl text-[var(--primary)] mb-6 opacity-50">
-						format_quote
-					</span>
+                <HugeiconsIcon icon={QuoteDownIcon} size={60} className="text-[var(--primary)] mb-6 opacity-50 mx-auto" />
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 leading-snug">
                     &ldquo;La atención en Quality Dent superó mis expectativas. El tratamiento
                     de implantes fue indoloro y el resultado es increíble. Totalmente
