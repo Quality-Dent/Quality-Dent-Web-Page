@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DentalFooter() {
     return (
@@ -8,7 +9,13 @@ export default function DentalFooter() {
                     <div className="md:col-span-1">
                         <div className="mb-4 flex items-center gap-2">
 
-                            <span className="text-lg font-semibold">Quality Dent</span>
+                            <Image src="/darklogo.webp"
+                                   alt="Quality Dent Logo"
+                                   width={150}
+                                   height={50}
+                                   quality={100}
+                                   className=" object-contain"
+                            />
                         </div>
                         <p className="text-sm text-muted-foreground">
                             Más de 20 años creando sonrisas saludables en San Miguel. Tu

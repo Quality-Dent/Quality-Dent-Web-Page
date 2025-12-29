@@ -2,23 +2,20 @@ import {HugeiconsIcon} from "@hugeicons/react";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Chatting01Icon, Menu01Icon} from "@hugeicons/core-free-icons";
+import Image from "next/image";
 
 export default function DentalHeader() {
   return (
       <header className="absolute top-0 sticky z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
               <Link href="#inicio" className="flex items-center gap-3">
-                  <div className="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-
-                  </div>
-                  <div className="leading-tight">
-                      <div className="text-base font-semibold tracking-tight">
-                          Quality Dent
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                          Odontología Integral
-                      </div>
-                  </div>
+                  <Image src="/logo.webp"
+                         alt="Quality Dent Logo"
+                         width={150}
+                         height={50}
+                         quality={100}
+                         className=" object-contain"
+                  />
 
 
               </Link>

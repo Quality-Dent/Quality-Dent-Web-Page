@@ -1,7 +1,44 @@
 import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {HugeiconsIcon} from "@hugeicons/react";
-import {MedicalFileIcon, ArrowRight01Icon, SmileIcon, Stethoscope02Icon, GridViewIcon, FirstAidKitIcon, ScissorIcon} from "@hugeicons/core-free-icons";
+import {
+    MedicalFileIcon, ArrowRight01Icon, SmileIcon, Stethoscope02Icon, GridViewIcon, FirstAidKitIcon, ScissorIcon,CleanIcon,
+    ArrowRight02Icon
+} from "@hugeicons/core-free-icons";
+
+
+const services = [
+    {
+        icon: SmileIcon,
+        title: "Ortodoncia",
+        description: "Brackets metálicos, estéticos e invisibles para alinear tu sonrisa perfectamente."
+    },
+    {
+        icon: Stethoscope02Icon,
+        title: "Consulta y Diagnóstico",
+        description: "Evaluación completa con cámara intraoral y radiografías digitales."
+    },
+    {
+        icon: CleanIcon,
+        title: "Limpieza Dental",
+        description: "Profilaxis profunda para eliminar sarro y prevenir enfermedades gingivales."
+    },
+    {
+        icon: GridViewIcon,
+        title: "Prótesis",
+        description: "Prótesis fijas y removibles diseñadas para verse y sentirse naturales."
+    },
+    {
+        icon: FirstAidKitIcon,
+        title: "Curaciones",
+        description: "Restauraciones estéticas con resina para tratar caries y fracturas."
+    },
+    {
+        icon: ScissorIcon,
+        title: "Extracciones",
+        description: "Cirugías simples y complejas, incluyendo muelas del juicio, sin dolor."
+    }
+];
 
 export default function ServicesSection() {
     return (
@@ -20,8 +57,9 @@ export default function ServicesSection() {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
                     {/* Featured Service Card */}
-                    <Card className="col-span-1 md:col-span-2 bg-gradient-to-br from-[var(--secondary)] to-[#004e8a] rounded-2xl p-8 text-white relative overflow-hidden group ring-0 border-0">
+                    <Card className=" col-span-1 md:col-span-2 bg-gradient-to-br from-[var(--secondary)] to-[#004e8a] rounded-2xl p-8 text-white relative overflow-hidden group ring-0 border-0">
                         <div className="absolute right-0 top-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
                         <CardContent className="relative z-10 p-0">
                             <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6 backdrop-blur-sm">
@@ -35,139 +73,44 @@ export default function ServicesSection() {
                                 implantes de titanio de alta gama. La solución permanente para
                                 dientes perdidos.
                             </CardDescription>
-                            <Button className="inline-flex items-center gap-2 text-white font-bold text-sm bg-white/20 hover:bg-white/30 px-4 py-2 h-auto rounded-lg transition-colors border-0">
-                                Consultar Ahora
-                                <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
-                            </Button>
+                            <a href={`#contacto`} >
+                                <Button className="group inline-flex cursor-pointer items-center gap-2 text-white font-bold text-sm bg-white/20 transition-all hover:bg-white/30 px-4 py-2 h-auto rounded-lg  border-0">
+                                    Consultar Ahora
+                                    <HugeiconsIcon icon={ArrowRight01Icon} size={16} className={`group-hover:translate-x-1 transition-transform`} />
+                                </Button>
+                            </a>
                         </CardContent>
                     </Card>
 
                     {/* Service Cards */}
-                    <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
-                        <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                                <HugeiconsIcon icon={SmileIcon} size={28} />
-                            </div>
-                            <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
-                                Ortodoncia
-                            </CardTitle>
-                            <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
-                                Brackets metálicos, estéticos e invisibles para alinear tu
-                                sonrisa perfectamente.
-                            </CardDescription>
-                            <a
-                                className="text-[var(--primary)] font-bold text-sm hover:underline"
-                                href="#contacto"
-                            >
-                                Saber más
-                            </a>
-                        </CardContent>
-                    </Card>
+                    {
+                        services.map((service, index) => (
+                            <Card key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
+                                <CardContent className="p-0">
+                                    <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+                                        <HugeiconsIcon icon={service.icon} size={28} />
+                                    </div>
+                                    <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
+                                        {service.title}
+                                    </CardTitle>
+                                    <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
+                                        {service.description}
 
-                    <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
-                        <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                                <HugeiconsIcon icon={Stethoscope02Icon} size={28} />
-                            </div>
-                            <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
-                                Consulta y Diagnóstico
-                            </CardTitle>
-                            <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
-                                Evaluación completa con cámara intraoral y radiografías
-                                digitales.
-                            </CardDescription>
-                            <a
-                                className="text-[var(--primary)] font-bold text-sm hover:underline"
-                                href="#contacto"
-                            >
-                                Saber más
-                            </a>
-                        </CardContent>
-                    </Card>
+                                    </CardDescription>
+                                    <a
+                                        className="text-[var(--primary)] group font-bold text-sm flex gap-2 justify-end transition-transform hover:translate-x-1 hover:underline"
+                                        href="#contacto"
+                                    >
+                                        Saber mas
+                                        <HugeiconsIcon icon={ArrowRight02Icon} size={20} />
+                                    </a>
 
-                    <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
-                        <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                                <HugeiconsIcon icon={Stethoscope02Icon} size={28} />
-                            </div>
-                            <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
-                                Limpieza Dental
-                            </CardTitle>
-                            <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
-                                Profilaxis profunda para eliminar sarro y prevenir enfermedades
-                                gingivales.
-                            </CardDescription>
-                            <a
-                                className="text-[var(--primary)] font-bold text-sm hover:underline"
-                                href="#contacto"
-                            >
-                                Saber más
-                            </a>
-                        </CardContent>
-                    </Card>
+                                </CardContent>
+                            </Card>
+                        ))
+                    }
 
-                    <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
-                        <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                                <HugeiconsIcon icon={GridViewIcon} size={28} />
-                            </div>
-                            <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
-                                Prótesis
-                            </CardTitle>
-                            <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
-                                prótesis fijas y removibles diseñadas para verse y sentirse
-                                naturales.
-                            </CardDescription>
-                            <a
-                                className="text-[var(--primary)] font-bold text-sm hover:underline"
-                                href="#contacto"
-                            >
-                                Saber más
-                            </a>
-                        </CardContent>
-                    </Card>
 
-                    <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
-                        <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                                <HugeiconsIcon icon={FirstAidKitIcon} size={28} />
-                            </div>
-                            <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
-                                Curaciones
-                            </CardTitle>
-                            <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
-                                Restauraciones estéticas con resina para tratar caries y
-                                fracturas.
-                            </CardDescription>
-                            <a
-                                className="text-[var(--primary)] font-bold text-sm hover:underline"
-                                href="#contacto"
-                            >
-                                Saber más
-                            </a>
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow border border-gray-100 group ring-0">
-                        <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center mb-6 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                                <HugeiconsIcon icon={ScissorIcon} size={28} />
-                            </div>
-                            <CardTitle className="text-xl font-bold text-[var(--secondary)] mb-2">
-                                Extracciones
-                            </CardTitle>
-                            <CardDescription className="text-gray-500 text-sm leading-relaxed mb-4">
-                                Cirugías simples y complejas, incluyendo muelas del juicio, sin
-                                dolor.
-                            </CardDescription>
-                            <a
-                                className="text-[var(--primary)] font-bold text-sm hover:underline"
-                                href="#contacto"
-                            >
-                                Saber más
-                            </a>
-                        </CardContent>
-                    </Card>
                 </div>
             </div>
         </section>

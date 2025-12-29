@@ -4,7 +4,8 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import {HugeiconsIcon} from "@hugeicons/react";
-import {SentIcon, Location01Icon, Clock01Icon, Call02Icon, MapsIcon} from "@hugeicons/core-free-icons";
+import {SentIcon, Location01Icon, Clock01Icon, Call02Icon, MapsIcon, WhatsappIcon} from "@hugeicons/core-free-icons";
+import Link from "next/link";
 
 export default function ContactSection() {
     return (
@@ -19,10 +20,33 @@ export default function ContactSection() {
                         <h2 className="text-3xl font-black text-[var(--secondary)] mb-6">
                             Agenda tu cita hoy
                         </h2>
-                        <p className="text-gray-600 mb-8">
+                        <p className="text-gray-600 mb-4">
                             Déjanos tus datos y nos pondremos en contacto contigo a la
                             brevedad para confirmar tu visita.
                         </p>
+
+                        {/* WhatsApp Contact Option */}
+                        <div className="mb-8 p-4 bg-green-50 rounded-xl border border-green-100">
+                            <p className="text-gray-700 text-sm mb-3">
+                                ¿Prefieres una respuesta inmediata? Escríbenos por WhatsApp:
+                            </p>
+                            <Link href="https://wa.me/51957887918?text=Hola,%20me%20gustaría%20agendar%20una%20cita" target="_blank">
+                                <Button
+                                    type="button"
+                                    className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 h-auto rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                                >
+                                    <HugeiconsIcon icon={WhatsappIcon} size={22} />
+                                    Contactar por WhatsApp
+                                </Button>
+                            </Link>
+                        </div>
+
+                        <div className="relative flex items-center mb-8">
+                            <div className="flex-grow border-t border-gray-200"></div>
+                            <span className="flex-shrink mx-4 text-gray-400 text-sm">o completa el formulario</span>
+                            <div className="flex-grow border-t border-gray-200"></div>
+                        </div>
+
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="col-span-1">
@@ -98,7 +122,7 @@ export default function ContactSection() {
                             </div>
                             <Button
                                 type="button"
-                                className="w-full bg-[var(--secondary)] hover:bg-[var(--secondary)]/90 text-white font-bold py-4 h-auto rounded-lg transition-colors flex items-center justify-center gap-2"
+                                className="w-full bg-[var(--secondary)] hover:bg-[var(--secondary)]/90 text-white font-bold py-4 h-auto rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
                             >
                                 Enviar Solicitud
                                 <HugeiconsIcon icon={SentIcon} size={20} />
@@ -152,10 +176,10 @@ export default function ContactSection() {
                                     Contacto Directo
                                 </h3>
                                 <p className="text-gray-300 text-lg hover:text-[var(--primary)] transition-colors cursor-pointer">
-                                    +51 999 000 000
+                                    +51 957 887 918
                                 </p>
                                 <p className="text-gray-300 text-sm mt-1">
-                                    contacto@qualitydent.com
+                                    jcastoncd@yahoo.com
                                 </p>
                             </div>
                         </div>
@@ -167,10 +191,12 @@ export default function ContactSection() {
                                 }}
                             ></div>
                             <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                                <Button className="bg-white text-[var(--secondary)] px-4 py-2 h-auto rounded-lg font-bold text-sm flex items-center gap-2 shadow-lg hover:bg-gray-50">
-                                    <HugeiconsIcon icon={MapsIcon} size={20} className="text-[var(--primary)]" />
-                                    Ver en Google Maps
-                                </Button>
+                                <Link href={`https://maps.app.goo.gl/6LXPUEw8Lf1pHhP26`} target={`_blank`}>
+                                    <Button className="bg-white text-[var(--secondary)] px-4 py-2 h-auto rounded-lg font-bold text-sm flex items-center gap-2 shadow-lg hover:bg-gray-50 cursor-pointer">
+                                        <HugeiconsIcon icon={MapsIcon} size={20} className="text-[var(--primary)]" />
+                                        Ver en Google Maps
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>

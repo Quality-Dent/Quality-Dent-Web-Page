@@ -18,7 +18,7 @@ export default function HeroSection() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
                 <div className="max-w-2xl">
                     <Badge className="h-auto px-3 py-1 bg-[var(--primary)]/20 text-white backdrop-blur-sm border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                        Más de 20 años de experiencia
+                        + 20 años de experiencia
                     </Badge>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
                         Sonrisas que transforman vidas
@@ -29,13 +29,17 @@ export default function HeroSection() {
                         y atención personalizada.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Button className="flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 h-auto rounded-lg font-bold text-base transition-all shadow-lg shadow-[var(--primary)]/30">
-                            <HugeiconsIcon icon={Calendar03Icon} size={20} />
-                            Agendar Cita
-                        </Button>
-                        <Button className="flex items-center justify-center gap-2 bg-white text-[var(--secondary)] hover:bg-gray-50 px-8 py-4 h-auto rounded-lg font-bold text-base transition-all">
-                            Nuestros Servicios
-                        </Button>
+                        <a href={`#contacto`}>
+                            <Button className="flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 h-auto rounded-lg font-bold text-base transition-all shadow-lg shadow-[var(--primary)]/30 cursor-pointer">
+                                <HugeiconsIcon icon={Calendar03Icon} size={20} />
+                                Agendar Cita
+                            </Button>
+                        </a>
+                        <a href={`#servicios`}>
+                            <Button className="flex items-center justify-center gap-2 bg-white text-[var(--secondary)] hover:bg-gray-200 px-8 py-4 h-auto rounded-lg font-bold text-base transition-all cursor-pointer">
+                                Nuestros Servicios
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </div>
