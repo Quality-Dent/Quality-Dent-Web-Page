@@ -8,28 +8,31 @@ import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
 import { toast } from "sonner";
 import {Textarea} from "@/components/ui/textarea";
 import {HugeiconsIcon} from "@hugeicons/react";
-import {SentIcon} from "@hugeicons/core-free-icons";
+import {Loading02Icon, SentIcon} from "@hugeicons/core-free-icons";
+import { useState } from 'react';
 
 const contactFormSchema = z.object({
-    name: z.string().min(2).max(50),
-    phone: z.string().max(15).refine(validator.isMobilePhone),
-    email: z.string().email(),
+    name: z.string().min(2,{message: "El nombre debe de ser de al menos 2 caracteres"})
+        .max(50,{message: "El nombre no debe exceder los 50 caracteres"}),
+    phone: z.string().max(15,{message:"El número no debe de exceder los 15 caracteres"})
+        .refine(validator.isMobilePhone,{message:"Ingresar un número de teléfono valido"}),
+    email: z.string().email({message: "Ingresar un email valido"}),
     message: z.string()
 });
 
 
 export default function ContactForm() {
+
+    const [loading, setLoading] = useState(false);
 
     const form = useForm<z.infer<typeof contactFormSchema>>({
         resolver: zodResolver(contactFormSchema),
@@ -41,9 +44,15 @@ export default function ContactForm() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+        setLoading(true);
+        // wait 4 secs
+        await new Promise((resolve) => setTimeout(resolve, 4000));
+
         console.log(values);
         toast.success("Event has been created");
+        form.reset();
+        setLoading(false);
     }
 
     return (
@@ -128,10 +137,14 @@ export default function ContactForm() {
 
                 <Button
                     type="submit"
+                    disabled={loading}
                     className="w-full bg-[var(--secondary)] hover:bg-[var(--secondary)]/90 text-white font-bold py-4 h-auto rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                     Enviar Solicitud
-                    <HugeiconsIcon icon={SentIcon} size={20} />
+                    {
+                        loading ? <HugeiconsIcon icon={Loading02Icon} size={22} className="animate-spin" /> : <HugeiconsIcon icon={SentIcon} size={20} />
+                    }
+
                 </Button>
             </form>
         </Form>
