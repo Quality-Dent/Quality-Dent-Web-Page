@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import validator from "validator";
+
 import { Button } from "@/components/ui/button";
 import {
     Form,
@@ -19,15 +19,10 @@ import {Textarea} from "@/components/ui/textarea";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {Loading02Icon, SentIcon} from "@hugeicons/core-free-icons";
 import { useState } from 'react';
+import { contactFormSchema } from  "@/dental/home/domain/model/contact-form-schema";
+import {sendEmailAction} from "@/dental/home/application/send-email-action";
 
-const contactFormSchema = z.object({
-    name: z.string().min(2,{message: "El nombre debe de ser de al menos 2 caracteres"})
-        .max(50,{message: "El nombre no debe exceder los 50 caracteres"}),
-    phone: z.string().max(15,{message:"El número no debe de exceder los 15 caracteres"})
-        .refine(validator.isMobilePhone,{message:"Ingresar un número de teléfono valido"}),
-    email: z.string().email({message: "Ingresar un email valido"}),
-    message: z.string()
-});
+
 
 
 export default function ContactForm() {
@@ -46,12 +41,16 @@ export default function ContactForm() {
 
     async function onSubmit(values: z.infer<typeof contactFormSchema>) {
         setLoading(true);
-        // wait 4 secs
-        await new Promise((resolve) => setTimeout(resolve, 4000));
 
-        console.log(values);
-        toast.success("Event has been created");
-        form.reset();
+        const {message ,success} = await sendEmailAction(values);
+
+        if (success) {
+            toast.success(message);
+            form.reset();
+        } else {
+            toast.error(message);
+        }
+
         setLoading(false);
     }
 

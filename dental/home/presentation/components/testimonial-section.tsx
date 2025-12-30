@@ -1,5 +1,3 @@
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {QuoteDownIcon} from "@hugeicons/core-free-icons";
 
