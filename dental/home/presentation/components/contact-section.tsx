@@ -1,7 +1,3 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {SentIcon, Location01Icon, Clock01Icon, Call02Icon, MapsIcon, WhatsappIcon} from "@hugeicons/core-free-icons";
@@ -31,7 +27,7 @@ export default function ContactSection() {
                             <p className="text-gray-700 text-sm mb-3">
                                 ¿Prefieres una respuesta inmediata? Escríbenos por WhatsApp:
                             </p>
-                            <Link href="https://wa.me/51957887918?text=Hola,%20me%20gustaría%20agendar%20una%20cita" target="_blank">
+                            <Link href="https://wa.link/fl2po1" target="_blank">
                                 <Button
                                     type="button"
                                     className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 h-auto rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"

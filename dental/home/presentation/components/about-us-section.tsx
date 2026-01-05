@@ -2,6 +2,7 @@ import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/car
 import {Button} from "@/components/ui/button";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {CheckmarkCircle02Icon, ArrowRight01Icon} from "@hugeicons/core-free-icons";
+import Image from "next/image";
 
 export default function AboutUsSection(){
     return (
@@ -11,11 +12,9 @@ export default function AboutUsSection(){
                     <div className="w-full lg:w-1/2 relative">
                         <div className="absolute -top-4 -left-4 w-24 h-24 bg-[var(--primary)]/20 rounded-full blur-2xl"></div>
                         <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[var(--secondary)]/10 rounded-full blur-2xl"></div>
-                        <img
-                            alt="Doctor explaining dental procedure to patient"
-                            className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTEfTo9qSgSFXRCSaNGcGpL56NNrYEYjRjSf9Ed4pXe9Tjr37kCIVppVPEMBJpFiFH9v9LklYAwC28lItbK18MpV3ZQxbQ5Snzl60t0GSwgl-wBWOCyImpEfQBu4S5JeIkAqH79s-h3-ClqU_JtXzlbRU8FgFTATZPJBDGCbFFDV4jsgSIQSRBfYfyteHAQ41KkGXdUtxAFsz5SNI7gM8ilxxiETUl_MXuh55QHZ8fdTuATfx3ApjlbU1vk-UtQN6YgUoSpvaq"
-                        />
+                        <div className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px] overflow-hidden">
+                            <Image src={`/facade.jpg`} alt={`Quality Dent Entrance`} quality={100} fill className={`object-cover scale-125`}/>
+                        </div>
                         <Card className="absolute bottom-8 left-8 bg-white p-6 rounded-lg shadow-lg max-w-[280px] ring-0">
                             <CardContent className="p-0">
                                 <div className="flex items-center gap-4 mb-2">

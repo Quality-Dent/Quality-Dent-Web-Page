@@ -2,6 +2,7 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {Calendar03Icon} from "@hugeicons/core-free-icons";
+import Image from "next/image";
 
 export default function HeroSection() {
     return (
@@ -10,10 +11,9 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--secondary)]/90 to-[var(--secondary)]/40 z-10"></div>
                 <div
                     className="h-full w-full bg-cover bg-center"
-                    style={{
-                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQzG1qZZ0NXa5TFw0bswoIONZszBvA7CN56xLK2-pWiM4bWw53tsyrEedVhVOieF8sQPSPkmvFxC0xoyBV32gPVFMetjJJglvT8GLC4W2-et_YuZoKJChlkHbnn-dL7jYcxW6b82qoTHSPSKpwjkc5P530kNxznHE0lGF8u1IYsIQPS2j9x-ujjYZj_QlY1jSn1YLZvK00WjGG9YeUl1n7T0EapINQ4NZoKUpZCV34X4HZKuV-OGidJYMnFxNxJXpoCgJQNVAw')`,
-                    }}
-                ></div>
+                >
+                    <Image src={`/astonitas.jpg`} alt={`Dr. Astonitas`} fill quality={100} className={`object-cover object-[75%_25%]`}/>
+                </div>
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
                 <div className="max-w-2xl">

@@ -46,7 +46,7 @@ export default function DentalHeader() {
 
               <div className="hidden md:flex">
                   <Button asChild className="rounded-full bg-green-500 hover:bg-green-600">
-                      <Link href="#contacto" className="gap-2 ">
+                      <Link href="https://wa.link/fl2po1" target={`_blank`} className="gap-2 ">
                           <HugeiconsIcon icon={Chatting01Icon} strokeWidth={2} className="size-4" />
                           Pedir Cita WhatsApp
                       </Link>
@@ -77,7 +77,7 @@ export default function DentalHeader() {
                       </DropdownMenuItem>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem >
-                          <Link href="#contacto" target={`_blank`}>
+                          <Link href="https://wa.link/fl2po1" target={`_blank`}>
                               <div className={`flex gap-2`}>
                                   <HugeiconsIcon icon={Chatting01Icon} strokeWidth={2} className="size-4" />
                                   Pedir Cita WhatsApp
