@@ -12,7 +12,7 @@ export default function HeroSection() {
                 <div
                     className="h-full w-full bg-cover bg-center"
                 >
-                    <Image src={`/astonitas.jpg`} alt={`Dr. Astonitas`} fill quality={100} className={`object-cover object-[75%_25%]`}/>
+                    <Image src={`/astonitas.jpg`} alt={`Dr. Astonitas`} fill quality={100} className={`object-cover object-[25%_75%] md:object-[75%_25%]`}/>
                 </div>
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
