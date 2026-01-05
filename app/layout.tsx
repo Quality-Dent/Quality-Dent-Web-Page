@@ -20,8 +20,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Quality Dent",
-  description: "Clínica dental en San Miguel - Odontología integral",
+    title: "Quality Dent",
+    description: "Clínica dental en San Miguel - Odontología integral",
+    keywords: [
+        "Quality Dent",
+        "Odontologo",
+        "Dentista" ,
+        "Dentista en San Miguel",
+        "Odontologo en San Miguel" ,
+        "Clinica Dental",
+        "Implantes Dentales"
+    ],
+    openGraph: {
+        images: "/logo.white"
+    }
 };
 
 export default function RootLayout({
