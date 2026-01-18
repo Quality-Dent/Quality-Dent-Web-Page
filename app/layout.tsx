@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         "Implantes Dentales"
     ],
     openGraph: {
-        images: "/logo.white"
+        images: "/logo-white.png"
     },
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
 };
