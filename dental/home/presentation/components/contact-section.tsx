@@ -95,7 +95,7 @@ export default function ContactSection() {
                                     Contacto Directo
                                 </h3>
                                 <p className="text-gray-300 text-lg ">
-                                    +51 957 887 918
+                                    +51 998 079 870
                                 </p>
                                 <p className="text-gray-300 text-sm mt-1">
                                     jcastoncd@yahoo.com
