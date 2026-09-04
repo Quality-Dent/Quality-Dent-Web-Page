@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import DentalFooter from "@/dental/shared/components/dental-footer";
@@ -56,6 +57,13 @@ export default function RootLayout({
         </div>
         <Toaster richColors/>
         <ReactLenis root />
+        {process.env.NEXT_PUBLIC_UMAMI_URL && process.env.NEXT_PUBLIC_UMAMI_ID && (
+            <Script
+                src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
+                data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+                strategy="afterInteractive"
+            />
+        )}
       </body>
     </html>
   );
