@@ -137,7 +137,7 @@ export default function DentalTermsAndConditionsPage() {
                         </p>
                         <address className="not-italic">
                             <p><strong>Dirección:</strong> Av. Rafael Escardo 201, San Miguel, Lima, Perú.</p>
-                            <p><strong>Teléfono:</strong> +51 957 887 918</p>
+                            <p><strong>Teléfono:</strong> +51 998 079 870</p>
                             <p><strong>Email:</strong> jcastoncd@yahoo.com</p>
                         </address>
                     </section>

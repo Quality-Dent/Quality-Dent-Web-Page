@@ -139,7 +139,7 @@ export default function DentalPrivacyPolicyPage() {
                                 Lima, Perú.
                             </p>
                             <p>
-                                <strong>Teléfono:</strong> +51 957 887 918
+                                <strong>Teléfono:</strong> +51 998 079 870
                             </p>
                             <p>
                                 <strong>Email:</strong> jcastoncd@yahoo.com

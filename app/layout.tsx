@@ -21,7 +21,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Quality Dent",
+    title: {
+        default: "Quality Dent | Clínica Dental en San Miguel, Lima",
+        template: "%s | Quality Dent",
+    },
     description: "Clínica dental en San Miguel - Odontología integral",
     keywords: [
         "Quality Dent",
@@ -33,11 +36,17 @@ export const metadata: Metadata = {
         "Implantes Dentales"
     ],
     openGraph: {
+        title: "Quality Dent | Clínica Dental en San Miguel, Lima",
+        description: "Clínica dental en San Miguel - Odontología integral",
+        locale: "es_PE",
+        type: "website",
+        siteName: "Quality Dent",
         images: "/logo-white.png"
     },
-    ...(process.env.NEXT_PUBLIC_SITE_URL && {
-        metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL),
-    }),
+    twitter: {
+        card: "summary",
+    },
+    metadataBase: new URL("https://qualitydentperu.com"),
 };
 
 export default function RootLayout({
